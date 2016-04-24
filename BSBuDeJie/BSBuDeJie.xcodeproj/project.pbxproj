@@ -57,7 +57,6 @@
 		ECF3D1821CC653A0000621AF /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF3D17B1CC653A0000621AF /* LaunchImage-800-Portrait-736h@3x.png */; };
 		ECF3D1831CC653A0000621AF /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF3D17C1CC653A0000621AF /* LaunchImage.png */; };
 		ECF3D1841CC653A0000621AF /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF3D17D1CC653A0000621AF /* LaunchImage@2x.png */; };
-		ECF3D1861CC6543B000621AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF3D1851CC6543B000621AF /* Images.xcassets */; };
 		ECF3D1891CC655A1000621AF /* BSTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3D1881CC655A1000621AF /* BSTabBarViewController.swift */; };
 		ECF3D18B1CC65AF0000621AF /* BSNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF3D18A1CC65AF0000621AF /* BSNavgationController.swift */; };
 /* End PBXBuildFile section */
@@ -137,8 +136,6 @@
 		ECF3D17B1CC653A0000621AF /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
 		ECF3D17C1CC653A0000621AF /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
 		ECF3D17D1CC653A0000621AF /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
-		ECF3D1851CC6543B000621AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		ECF3D1871CC65532000621AF /* BS.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BS.pch; sourceTree = "<group>"; };
 		ECF3D1881CC655A1000621AF /* BSTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSTabBarViewController.swift; sourceTree = "<group>"; };
 		ECF3D18A1CC65AF0000621AF /* BSNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSNavgationController.swift; sourceTree = "<group>"; };
 		F45495197958EA03076D5AA2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -241,7 +238,6 @@
 				ECF3D0EB1CC651AD000621AF /* Assets.xcassets */,
 				ECF3D0F01CC651AD000621AF /* Info.plist */,
 				ECF3D1761CC653A0000621AF /* 启动图片 */,
-				ECF3D1851CC6543B000621AF /* Images.xcassets */,
 			);
 			path = BSBuDeJie;
 			sourceTree = "<group>";
@@ -442,7 +438,6 @@
 		ECF3D13A1CC65270000621AF /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				ECF3D1871CC65532000621AF /* BS.pch */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -642,7 +637,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECF3D1861CC6543B000621AF /* Images.xcassets in Resources */,
 				ECF3D1811CC653A0000621AF /* LaunchImage-800-667h@2x.png in Resources */,
 				EC6598D91CC9D5BB00886030 /* BSLoginOrRegisterView.xib in Resources */,
 				EC8391951CC7D9FD00AA0AAB /* BSMineTableViewController.storyboard in Resources */,
@@ -886,7 +880,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PREFIX_HEADER = BSBuDeJie/BSBuDeJie/Classess/Main/Others/BS.pch;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = BSBuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -901,7 +895,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PREFIX_HEADER = BSBuDeJie/BSBuDeJie/Classess/Main/Others/BS.pch;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = BSBuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

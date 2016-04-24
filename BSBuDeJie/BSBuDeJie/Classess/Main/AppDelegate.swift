@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
-//      window?.rootViewController = BSADViewController()
-        window?.rootViewController = BSTabBarViewController()
+      window?.rootViewController = BSADViewController()
+//        window?.rootViewController = BSTabBarViewController()
         window?.makeKeyAndVisible()
         //添加FPS监测
         addFPS()
