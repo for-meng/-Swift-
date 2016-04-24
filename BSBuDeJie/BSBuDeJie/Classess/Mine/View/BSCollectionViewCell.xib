@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="plL-Sx-cCL" customClass="BSCollectionViewCell" customModule="BSBuDeJie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="81" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="81" height="85"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="nAZ-g0-axA">
+                        <rect key="frame" x="8" y="8" width="65" height="49"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="49" id="fcw-Ih-bDT"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyL-xb-WLp">
+                        <rect key="frame" x="0.0" y="63" width="81" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eyL-xb-WLp" secondAttribute="trailing" id="EIw-VE-b0L"/>
+                <constraint firstItem="nAZ-g0-axA" firstAttribute="leading" secondItem="plL-Sx-cCL" secondAttribute="leading" constant="8" id="Eci-AA-80y"/>
+                <constraint firstAttribute="trailing" secondItem="nAZ-g0-axA" secondAttribute="trailing" constant="8" id="Tov-BB-XMY"/>
+                <constraint firstItem="nAZ-g0-axA" firstAttribute="top" secondItem="plL-Sx-cCL" secondAttribute="top" constant="8" id="UsO-6c-opm"/>
+                <constraint firstItem="eyL-xb-WLp" firstAttribute="leading" secondItem="plL-Sx-cCL" secondAttribute="leading" id="ZRI-Ob-oFS"/>
+                <constraint firstAttribute="bottom" secondItem="eyL-xb-WLp" secondAttribute="bottom" constant="5" id="h48-Wj-zBm"/>
+            </constraints>
+            <size key="customSize" width="81" height="85"/>
+            <connections>
+                <outlet property="iconImage" destination="nAZ-g0-axA" id="GBg-or-h3v"/>
+                <outlet property="nameLabel" destination="eyL-xb-WLp" id="1bt-59-i9s"/>
+            </connections>
+            <point key="canvasLocation" x="320.5" y="164.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="imageBackground" width="75" height="15"/>
+    </resources>
+</document>
