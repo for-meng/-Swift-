@@ -25,8 +25,8 @@ class BSFileManager {
         let mgr = NSFileManager.defaultManager()
         //想系统申请一个bool类型的指针
         var isDirectory = UnsafeMutablePointer<ObjCBool>.alloc(1);
-        //初始化该指针为false
-        isDirectory.initialize(false)
+        //初始化该指针为true
+        isDirectory.initialize(true)
         let isExist = mgr.fileExistsAtPath(directoryPath, isDirectory: isDirectory)
         if !isExist || isDirectory.memory.boolValue == false
         {
@@ -60,7 +60,7 @@ class BSFileManager {
     {
         let mgr = NSFileManager.defaultManager()
         var isDirectory = UnsafeMutablePointer<ObjCBool>.alloc(1);
-        isDirectory.initialize(false)
+        isDirectory.initialize(true)
         let isExist = mgr.fileExistsAtPath(directoryPath, isDirectory: isDirectory)
         if !isExist || isDirectory.memory.boolValue == false
         {
@@ -81,11 +81,20 @@ class BSFileManager {
         for subPath in subPaths!
         {   //拼接路径
             let filePath = (directoryPath as NSString).stringByAppendingPathComponent(subPath)
-            let isExist = mgr.fileExistsAtPath(directoryPath, isDirectory: nil)
-            if !isExist
+            //想系统申请一个bool类型的指针
+            var isDirectory = UnsafeMutablePointer<ObjCBool>.alloc(1);
+            //初始化该指针为false
+            isDirectory.initialize(true)
+            let isExist = mgr.fileExistsAtPath(directoryPath, isDirectory: isDirectory)
+            if !isExist || isDirectory.memory.boolValue == false
             {
                 continue
             }
+            //摧毁指针
+            isDirectory.destroy()
+            //释放分配的内存
+            isDirectory.dealloc(1)
+            isDirectory = nil
             if filePath.containsString(".DS") {
                 continue
             }

@@ -14,7 +14,7 @@ class BSMusicManage {
     ///存储音乐播放器数组
     static var _players:[String : AVAudioPlayer] = Dictionary()
     ///存储音效ID数组
-    static let _soundIds:[String : SystemSoundID] = Dictionary()
+    static var _soundIds:[String : SystemSoundID] = Dictionary()
 
     /**
      判断对应的音乐是否正在播放
@@ -79,17 +79,25 @@ class BSMusicManage {
     /**
      播放音效
      */
-//    class func playSoundWithSounddName(soundName: String){
-//        //定义SystemSoundId
-//        //从字典中取出SoundId，取出时nil，表示字典中没有
-//        if let soundId = _soundIds[soundName] {
-//           if soundId == 0 {
-//                if let url = NSBundle.mainBundle().URLForResource(soundName, withExtension: nil){
-//                    //卧槽。。。这里要传指针
-//                    AudioServicesCreateSystemSoundID(url, soundId)
-//                }
-//            
-//            }
-//        }
-//    }
+    class func playSoundWithSounddName(soundName: String){
+        //定义SystemSoundId
+        var soundID : SystemSoundID = 0
+        //从字典中取出SoundId，取出时nil，表示字典中没有
+        if let soundId = _soundIds[soundName] {
+           if soundId == 0 {
+            if let url:CFURLRef = NSBundle.mainBundle().URLForResource(soundName, withExtension: nil){
+                    var sound = UnsafeMutablePointer<SystemSoundID>.alloc(1);
+                    sound.initialize(soundId)
+                    AudioServicesCreateSystemSoundID(url, sound)
+                    _soundIds.updateValue(soundId, forKey: soundName)
+                    sound.destroy()
+                    sound.dealloc(1)
+                    sound = nil
+                }
+           }else {
+            //不为 0 则赋值
+            soundID = soundId   }
+        }
+        AudioServicesPlaySystemSound(soundID)
+    }
 }
