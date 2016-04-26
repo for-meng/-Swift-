@@ -23,16 +23,20 @@ class BSFileManager {
     class func removeDirectoryPath(directoryPath : String)
     {
         let mgr = NSFileManager.defaultManager()
-//        var isDirectory = UnsafeMutablePointer<ObjCBool>.alloc(1);
-//        isDirectory.initialize(false)
-        let isExist = mgr.fileExistsAtPath(directoryPath, isDirectory: nil)
-        if !isExist
+        //想系统申请一个bool类型的指针
+        var isDirectory = UnsafeMutablePointer<ObjCBool>.alloc(1);
+        //初始化该指针为false
+        isDirectory.initialize(false)
+        let isExist = mgr.fileExistsAtPath(directoryPath, isDirectory: isDirectory)
+        if !isExist || isDirectory.memory.boolValue == false
         {
             NSException(name: "filePathError", reason: "传错,必须传文件夹路径", userInfo: nil).raise()
         }
-//        isDirectory.destroy()
-//        isDirectory.dealloc(1)
-//        isDirectory = nil
+        //摧毁指针
+        isDirectory.destroy()
+        //释放分配的内存
+        isDirectory.dealloc(1)
+        isDirectory = nil
         var subPaths:[String]?
         do{
             subPaths = try NSFileManager.defaultManager().contentsOfDirectoryAtPath(directoryPath)
@@ -55,16 +59,16 @@ class BSFileManager {
     class func getDirectorySize(directoryPath : String)->UInt64
     {
         let mgr = NSFileManager.defaultManager()
-//        var isDirectory = UnsafeMutablePointer<ObjCBool>.alloc(1);
-//        isDirectory.initialize(false)
-        let isExist = mgr.fileExistsAtPath(directoryPath, isDirectory: nil)
-        if !isExist
+        var isDirectory = UnsafeMutablePointer<ObjCBool>.alloc(1);
+        isDirectory.initialize(false)
+        let isExist = mgr.fileExistsAtPath(directoryPath, isDirectory: isDirectory)
+        if !isExist || isDirectory.memory.boolValue == false
         {
             NSException(name: "filePathError", reason: "传错,必须传文件夹路径", userInfo: nil).raise()
         }
-//        isDirectory.destroy()
-//        isDirectory.dealloc(1)
-//        isDirectory = nil
+        isDirectory.destroy()
+        isDirectory.dealloc(1)
+        isDirectory = nil
 
         var subPaths:[String]?
         var totalSize:UInt64 = 0
