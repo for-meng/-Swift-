@@ -82,12 +82,12 @@ class BSFastLogin:UIView{
 class BSLoginButton:UIButton {
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView?.center.x = width * 0.5
-        imageView?.frame.origin.y = 0
+        imageView?.centerX = width * 0.5
+        imageView?.y = 0
         
         titleLabel?.sizeToFit()
-        titleLabel?.center.x = width * 0.5
-        titleLabel?.frame.origin.y = height - (titleLabel?.height)!
+        titleLabel?.centerX = width * 0.5
+        titleLabel?.y = height - (titleLabel?.height)!
     }
 }
 

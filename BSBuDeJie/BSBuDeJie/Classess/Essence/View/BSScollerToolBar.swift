@@ -79,7 +79,7 @@ class BSScollerToolBar: UIScrollView {
     }
     
     //MARK: -懒加载 属性
-    internal var scrollToolBardelegate : BSScrollerToolBarDelegate?
+    internal weak var scrollToolBardelegate : BSScrollerToolBarDelegate?
     private let contentView = UIView.init()
     lazy var downView : UIView = {
         let view: UIView = UIView.init()
@@ -93,7 +93,7 @@ class BSScollerToolBar: UIScrollView {
 }
 //代理，按钮点击
 protocol BSScrollerToolBarDelegate : NSObjectProtocol{
-    func scrollerToolBarButtonClick(toolBar:BSScollerToolBar,type:BSType)
+   func scrollerToolBarButtonClick(toolBar:BSScollerToolBar,type:BSType)
 }
 
 class BSButton: UIButton {

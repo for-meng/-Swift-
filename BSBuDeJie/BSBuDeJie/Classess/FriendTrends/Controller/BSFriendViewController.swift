@@ -36,6 +36,3 @@ class BSFriendViewController: UIViewController {
     //MARK: - 懒加载
     
 }
-
-
-//MARK: - 协议、代理
