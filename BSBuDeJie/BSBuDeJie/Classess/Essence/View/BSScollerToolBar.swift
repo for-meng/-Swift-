@@ -46,10 +46,7 @@ class BSScollerToolBar: UIScrollView {
         selectedBtn!.selected = false
         btn.selected = true
         selectedBtn = btn
-        if ((scrollToolBardelegate?.respondsToSelector("scrollerToolBarButtonClick::")) != nil)
-        {
-            scrollToolBardelegate?.scrollerToolBarButtonClick(self, type: BSType(rawValue: btn.tag)!)
-        }
+        scrollToolBardelegate?.scrollerToolBarButtonClick(self, type: BSType(rawValue: btn.tag)!)
         setNeedsLayout()
         if previousToolBarButton != btn
         {
@@ -79,7 +76,7 @@ class BSScollerToolBar: UIScrollView {
     }
     
     //MARK: -懒加载 属性
-    internal weak var scrollToolBardelegate : BSScrollerToolBarDelegate?
+    weak var scrollToolBardelegate : BSScrollerToolBarDelegate?
     private let contentView = UIView.init()
     lazy var downView : UIView = {
         let view: UIView = UIView.init()
@@ -91,12 +88,12 @@ class BSScollerToolBar: UIScrollView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-//代理，按钮点击
-protocol BSScrollerToolBarDelegate : NSObjectProtocol{
-   func scrollerToolBarButtonClick(toolBar:BSScollerToolBar,type:BSType)
+//代理，按钮点击       clas表示只能由类遵守协议（因为结构体也可以遵守䫔）
+protocol BSScrollerToolBarDelegate : class{
+    func scrollerToolBarButtonClick(toolBar:BSScollerToolBar,type:BSType)
 }
 
-class BSButton: UIButton {
+class BSButton: UIButton,UIScrollViewDelegate {
     override init(frame: CGRect) {
         super.init(frame: frame)
         //去除高亮状态

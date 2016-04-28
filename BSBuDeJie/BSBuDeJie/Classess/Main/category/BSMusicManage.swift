@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 
 class BSMusicManage {
-    //类方法中不能使用属性
     ///存储音乐播放器数组
     static var _players:[String : AVAudioPlayer] = Dictionary()
     ///存储音效ID数组
@@ -25,7 +24,7 @@ class BSMusicManage {
         }
         return false  }
     /**
-    根据网络URL下载音乐到本地，下载完成后自动包房
+    根据网络URL下载音乐到本地，下载完成后自动播放
     */
     class func playMusicWithURLString(urlString : String){
         if urlString.characters.count == 0 {

@@ -19,6 +19,7 @@
 		EC3BE1711CCC564900F8B2A3 /* BSCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BE16F1CCC564900F8B2A3 /* BSCommentViewController.swift */; };
 		EC3BE1741CCC575700F8B2A3 /* BSCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC3BE1731CCC575700F8B2A3 /* BSCommentCell.xib */; };
 		EC3BE1761CCC59BD00F8B2A3 /* BSCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3BE1751CCC59BD00F8B2A3 /* BSCommentCell.swift */; };
+		EC42CD2F1CD1FAC200A85AD9 /* BSRemoteMusicManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC42CD2E1CD1FAC200A85AD9 /* BSRemoteMusicManage.swift */; };
 		EC51591F1CC91C29005D0006 /* UIImage+Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC51591E1CC91C29005D0006 /* UIImage+Tool.swift */; };
 		EC5159211CC91F0F005D0006 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5159201CC91F0F005D0006 /* UIView+Frame.swift */; };
 		EC5159231CC923F6005D0006 /* BSADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5159221CC923F6005D0006 /* BSADViewController.swift */; };
@@ -92,6 +93,7 @@
 		EC3BE16F1CCC564900F8B2A3 /* BSCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSCommentViewController.swift; sourceTree = "<group>"; };
 		EC3BE1731CCC575700F8B2A3 /* BSCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSCommentCell.xib; sourceTree = "<group>"; };
 		EC3BE1751CCC59BD00F8B2A3 /* BSCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSCommentCell.swift; sourceTree = "<group>"; };
+		EC42CD2E1CD1FAC200A85AD9 /* BSRemoteMusicManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSRemoteMusicManage.swift; sourceTree = "<group>"; };
 		EC51591E1CC91C29005D0006 /* UIImage+Tool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Tool.swift"; sourceTree = "<group>"; };
 		EC5159201CC91F0F005D0006 /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
 		EC5159221CC923F6005D0006 /* BSADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BSADViewController.swift; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 				EC8391961CC7EC9700AA0AAB /* BSHttpTool.swift */,
 				EC0A7C691CC8D86A005EA549 /* BSFileManager.swift */,
 				ECD77D881CCCB1ED009ED630 /* BSMusicManage.swift */,
+				EC42CD2E1CD1FAC200A85AD9 /* BSRemoteMusicManage.swift */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -758,6 +761,7 @@
 				ECD77D891CCCB1ED009ED630 /* BSMusicManage.swift in Sources */,
 				EC73EAFE1CC8747C00AC0B1A /* BSCollectionViewCell.swift in Sources */,
 				EC0A7C6D1CC8F675005EA549 /* BSRecommendCell.swift in Sources */,
+				EC42CD2F1CD1FAC200A85AD9 /* BSRemoteMusicManage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

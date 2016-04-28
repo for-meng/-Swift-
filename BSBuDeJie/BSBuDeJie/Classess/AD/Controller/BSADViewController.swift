@@ -63,7 +63,8 @@ class BSADViewController: UIViewController {
         item = BSADModel.init(dict: dict)
         if item!.w <= 0 { return }
         //展示界面
-        let h = screenHeight / CGFloat((item?.w)!) * CGFloat((item?.h)!)
+        let h = screenWidth * CGFloat((item?.h)!) / CGFloat((item?.w)!)
+        
         imageView.frame = CGRectMake(0, 0, screenWidth, h)
         imageView.sd_setImageWithURL(NSURL.init(string: (item?.w_picurl)!)) { (image, _, _, _) -> Void in
             self.imageView.image = image

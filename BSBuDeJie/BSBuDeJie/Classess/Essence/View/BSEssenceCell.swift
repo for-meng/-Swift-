@@ -194,10 +194,12 @@ class BSEssenceImage: UIView {
     
     /** 音频播放     */
     @IBAction func playVoiceClick(sender: UIButton) {
+        sender.selected = !BSRemoteMusicManage.shareInstance.isCurrentMusic(model!.voiceuri!)
+        BSRemoteMusicManage.shareInstance.playMusic(model!.voiceuri!)
         //正在播放音乐就选中
-        sender.selected = BSMusicManage.musicIsPlaying((model?.voiceuri)!)
-        let dict = ["model":model!] as [NSObject:AnyObject]
-        NSNotificationCenter.defaultCenter().postNotificationName("playVoiceClick", object: nil, userInfo: dict)
+//        sender.selected = BSMusicManage.musicIsPlaying((model?.voiceuri)!)
+//        let dict = ["model":model!] as [NSObject:AnyObject]
+//        NSNotificationCenter.defaultCenter().postNotificationName("playVoiceClick", object: nil, userInfo: dict)
     }
     
     /** 视频播放     */
